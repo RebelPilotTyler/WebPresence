@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<!--The main UAT Space Page html code
+Tyler Widener
+tylerwidenerlm@gmail.com-->
+
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="code.js">
+
+    </script>
+    <script src="class.js">
+
+    </script>
+    <script src="dataLoader.js">
+
+    </script>
+    <script>
+        //alert("This is a test of the alert function!");
+        //Creating needed variables...
+        var wins = 0;
+        var loss = 0;
+        var tie = 0;
+        var theTime = new Date();
+        var tempTime = new Date();
+        var time_interval = 5000;
+        var last_iteration = 0;
+        var running = true;
+        var index = 0;
+        var timer;
+
+        //Method to get data into array...
+        var data = getData();
+    </script>
+    <title>Tyler's CSC102 Webpage</title>
+</head>
+
+<body>
+    <table>
+        <td>
+            <img src="UATspaceLogo-1.png">
+        </td>
+        <td>
+            <h1>
+                UAT Space Program
+            </h1>
+        </td>
+    </table>
+    <table id="data" width="70%" border="2">
+        <col width="35%">
+        <col width="35%">
+        <thead>
+            <th>
+                Data Type
+            </th>
+            <th>
+                Reading
+            </th>
+        </thead>
+        <tbody>
+            <tr id="seconds"></tr>
+            <tr id="latitude"></tr>
+            <tr id="longitude"></tr>
+            <tr id="gps_altitude"></tr>
+            <tr id="bmp_sensor_altitude"></tr>
+            <tr id="bmp_sensor_pressure"></tr>
+            <tr id="bmp_sensor_temperature"></tr>
+            <tr id="digital_sensor_pressure"></tr>
+            <tr id="css_sensor_temperature"></tr>
+            <tr id="css_sensor_eco2"></tr>
+            <tr id="css_sensor_tvoc"></tr>
+            <tr id="uv"></tr>
+            <tr id="accel_x"></tr>
+            <tr id="accel_y"></tr>
+            <tr id="accel_z"></tr>
+            <tr id="magnetic_x"></tr>
+            <tr id="magnetic_y"></tr>
+            <tr id="magnetic_z"></tr>
+            <tr id="gyro_x"></tr>
+            <tr id="gyro_y"></tr>
+            <tr id="gyro_z"></tr>
+        </tbody>
+    </table>
+    <p id="timeClock">
+        Time is displayed here when running
+    </p>
+    <button id="startButton" class="button" onclick="start();">
+        Start
+    </button>
+    <button id="stopButton" class="button" onclick="stop()">
+        Stop
+    </button>
+    <br>
+    <br>
+    <p id="countdownTimer">
+        Starting Countdown...
+    </p>
+    <button onclick="play_craps();">
+        Play Craps
+    </button>
+    <p id="die1Res">
+        Waiting on Die 1...
+    </p>
+    <p id="die2Res">
+        Waiting on Die 2...
+    </p>
+    <p id="sumRes">
+        Waiting for sum...
+    </p>
+    <p id="finalResult">
+        Waiting on final result...
+    </p>
+    <p>
+        Wins are:
+    <div id="winsRes">0</div>
+    </p>
+    <p>
+        Losses are:
+    <div id="lossRes">0</div>
+    </p>
+    <p>
+        Draws are:
+    <div id="tieRes">0</div>
+    </p>
+    <br>
+    <br>
+    <script>
+        var fallLaunch = new Mission("To boldly go...", 100, 31, "October", 2021, "Fiona", 3);
+        var springLaunch = new Mission("To go again...", 15, 12, "April", 2022, "Polaris", 5);
+    </script>
+    <button class="lgButton" onclick="launchFall();">
+        Launch Fall Mission
+    </button>
+    <button class="lgButton" onclick="displayFall();">
+        Display Fall Mission
+    </button>
+    <br>
+    <button class="lgButton" onclick="launchSpring();">
+        Launch Spring Mission
+    </button>
+    <button class="lgButton" onclick="displaySpring();">
+        Display Spring Mission
+    </button>
+    <br>
+    <br>
+    <button class="lgButton" onclick="playStation();">
+        Play Space Station Sounds
+    </button>
+    <br>
+    <button class="lgButton" onclick="playTheme();">
+        Play Eternal Voyage Theme
+    </button>
+    <br>
+    <br>
+    <button class="lgButton" onclick="goIndex();">Go to my Landing Page</button>
+    <button class="lgButton" onclick="goUATSpace();">Go to UAT Space</button>
+</body>
+
+</html>

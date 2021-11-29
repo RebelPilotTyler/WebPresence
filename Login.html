@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--This page is the login for the UAT Space Page
+Due 10/10/2021
+By Tyler Widener email: tylerwidenerlm@gmail.com-->
+<html>
+
+<head>
+    <script src="Login.js"></script>
+    <link href="loginStyle.css" rel="stylesheet" type="text/css">
+    <title>UAT Space Login Page</title>
+</head>
+
+<body>
+    <h1 id="loginTitleText">
+        Welcome to the UAT Space Page
+    </h1>
+    <h2>
+        <div id="loginDivText" class="blink_me">
+            Please login...
+        </div>
+    </h2>
+    <br>
+    <p id="LoginStatus">
+        Status of login...
+    </p>
+    <br>
+    <form id="CreditSubmit" onsubmit="return false">
+        First Name: <input type="text" id="FName"/>
+        <br>
+        Last Name: <input type="text" id="LName"/>
+        <br>
+        Badge Number: <input type="number" id="BadgeID"/>
+        <br>
+        <input type="submit" onclick="checkCreds();"/>
+    </form>
+</body>
+
+</html>
